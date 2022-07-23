@@ -19,7 +19,7 @@ sticky -its a combination of fixed and relative ,and it depends on the scroll po
 .child-one{
     position: fixed;
 
-    top:40px;
+    top:640px;
 
 }
 
@@ -49,7 +49,7 @@ sticky -its a combination of fixed and relative ,and it depends on the scroll po
 
 
 .child-one{
-    background-color: rgb(116,255,116);
+  
 
 }
 
