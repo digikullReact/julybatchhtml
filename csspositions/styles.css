@@ -1,0 +1,64 @@
+/**
+static  --default position provided to you by the browser
+fixed  -- is used to put some content at particular position while scrolling
+absolute - is used when you want to make your content overlap each other ,they both exist at the same time at same place
+relative -is similar to static  only but ,you can apply top bottom ,left syntaxes to it 
+sticky -its a combination of fixed and relative ,and it depends on the scroll position whether to behave fixed or relative
+**/
+
+.parent{
+    position: relative;
+    height: 1000vh;/*viewport heigh*/
+    width: 200px;
+    
+    
+
+}
+
+
+.child-one{
+    position: fixed;
+
+    top:40px;
+
+}
+
+.child-two{
+   
+
+}
+
+.child-three{
+  
+
+}
+
+
+
+
+
+
+.parent{
+    padding: 15px;
+    background-color: #00afff;
+}
+
+.child{
+    padding: 25px;
+}
+
+
+.child-one{
+    background-color: rgb(116,255,116);
+
+}
+
+.child-two{
+    background-color: rgb(248,117,117);
+
+}
+
+.child-three{
+    background-color: rgb(255,116,232);
+
+}
