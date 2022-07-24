@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./top.ico">
+    <title>Document</title>
+
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+          
+        }
+
+        header{
+            display:flex;
+            justify-content:space-evenly;
+            border: 1px solid black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color:yellowgreen;
+        }
+
+
+        
+        h3>a{
+            text-decoration: none;
+            color: brown;
+
+        }
+
+        #submenu{
+            position: absolute;
+            background-color: aquamarine;
+            border: 1px solid firebrick;
+            width: 150px;
+           
+            flex-direction: column;
+            align-items: center;
+           display: none
+        }
+        .service{
+            position: relative;
+        }
+
+        .service:hover+ #submenu{
+            display: flex;
+        
+        }
+
+        #change:hover{
+            color: blue;
+        }
+
+        a:visited{
+            color: yellow;
+        }
+/**
+visibility hidden -just hides(from ui) it
+display none -remove +hide(from ui) it
+**/
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <img width="50px" height="50px" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png" alt="">
+        </div>
+       <h3 ><a  id="change" href="">Home</a></h3>
+       <h3><a href="">About Us</a></h3>
+
+       <h3><a href="">Contact</a></h3>
+
+       <div   >
+        <h3  class="service" >
+            <a href="">Service</a>
+        </h3>
+
+        <div id="submenu">
+
+            <h3><a href="">Home</a></h3>
+            <h3><a href="">About Us</a></h3>
+     
+            <h3><a href="google.com">Contact</a></h3>
+
+        </div>
+
+
+     
+    
+    
+    
+       </div>
+
+      
+
+
+
+    </header>
+    <a href="http://google.com">Google</a>
+</body>
+</html>

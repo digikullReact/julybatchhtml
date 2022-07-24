@@ -38,7 +38,7 @@ prirority
     justify-content:space-evenly;/* used to provide spacing between the content on x axis*/
    /* flex-direction: column;* Will Align items along the cross axis*/
    flex-direction: row;/* you want to align around x axis or you want to align on yaxis*/
-   align-items:flex-start; /* if you want to align your flex items as per the baseline or in between the baseline or in the center */
+   align-items:flex-end; /* if you want to align your flex items as per the baseline or in between the baseline or in the center */
 }
 
 .flex-1{
