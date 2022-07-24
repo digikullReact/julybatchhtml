@@ -1,0 +1,65 @@
+/**
+alignitems 
+center
+flex-start
+flex-end
+**/
+
+/**
+justify-content
+space-between
+space-around
+center
+space-evenly
+
+**/
+
+/**
+flex-direction
+row: Items are placed the same as the text direction.
+row-reverse: Items are placed opposite to the text direction.
+column: Items are placed top to bottom.
+column-reverse: Items are placed bottom to top.
+**/
+
+/**
+order 
+prirority
+-2>-1>0>1>2
+
+**/
+
+.main{
+    height: 800px;
+    background-color: yellow;
+    border: 1px solid black ;
+    flex-wrap: wrap;/* For mobile responsiveness*/
+    display: flex;
+    justify-content:space-evenly;/* used to provide spacing between the content on x axis*/
+   /* flex-direction: column;* Will Align items along the cross axis*/
+   flex-direction: row;/* you want to align around x axis or you want to align on yaxis*/
+   align-items:flex-start; /* if you want to align your flex items as per the baseline or in between the baseline or in the center */
+}
+
+.flex-1{
+    background-color: blue;
+    width: 200px;
+    height: 100px;
+    order: 2;
+}
+
+.flex-2{
+    background-color: brown;
+    width: 300px;
+    height: 300px;
+
+  
+}
+
+.flex-3{
+    background-color: palegreen;
+    width: 300px;
+    height: 400px;
+    order:-1;
+   
+}
