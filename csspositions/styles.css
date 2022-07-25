@@ -9,7 +9,7 @@ sticky -its a combination of fixed and relative ,and it depends on the scroll po
 .parent{
     position: relative;
     height: 1000vh;/*viewport heigh*/
-    width: 200px;
+  
     
     
 
@@ -17,9 +17,10 @@ sticky -its a combination of fixed and relative ,and it depends on the scroll po
 
 
 .child-one{
-    position: fixed;
+  
 
-    top:640px;
+  position:relative; /*Position relative and position are static kind of same*/
+  top:200px;
 
 }
 
@@ -49,7 +50,8 @@ sticky -its a combination of fixed and relative ,and it depends on the scroll po
 
 
 .child-one{
-  
+  background-color: rgb(247,111,1);;
+  margin-top:200px;
 
 }
 
