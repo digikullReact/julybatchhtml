@@ -1,0 +1,15 @@
+.parent{
+    display: grid;
+   /* grid-template-columns:40% 60%;*/
+   grid-template-columns: repeat(3,4fr); /*fraction  1fr --> 1part of available space  3 fr- 3 part of available space*/
+   /* grid-column-gap: 14px;
+    grid-row-gap:14px;
+    */
+  
+    grid-gap:14px;
+}
+
+.parent>div{
+    background-color: #3399FF;
+    padding: 20px;
+}
