@@ -13,3 +13,15 @@
     background-color: #3399FF;
     padding: 20px;
 }
+
+
+div{
+    height: 200px;
+    width: 200px;
+    background-image: linear-gradient(to left, red 30%,yellow 1%);
+}
+
+
+
+
+
