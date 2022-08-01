@@ -1,7 +1,7 @@
 .parent{
     display: grid;
-   /* grid-template-columns:40% 60%;*/
-   grid-template-columns: repeat(3,4fr); /*fraction  1fr --> 1part of available space  3 fr- 3 part of available space*/
+    grid-template-columns:60% 20% 20% 20%;
+  /* grid-template-columns: repeat(3,4fr); /*fraction  1fr --> 1part of available space  3 fr- 3 part of available space*/
    /* grid-column-gap: 14px;
     grid-row-gap:14px;
     */
@@ -9,18 +9,24 @@
     grid-gap:14px;
 }
 
-.parent>div{
-    background-color: #3399FF;
-    padding: 20px;
+.first{
+    background-color: green;
+    height: 30px;
+}
+.second{
+    background-color: brown;
+    height: 30px;
 }
 
-
-div{
-    height: 200px;
-    width: 200px;
-    background-image: linear-gradient(to left, red 30%,yellow 1%);
+.third{
+    background-color: yellow;
+    height: 30px;
 }
 
+.fourth{
+    background-color: blue;
+    height: 30px;
+}
 
 
 
