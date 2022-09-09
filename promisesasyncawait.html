@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+
+    <style>
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#loader{
+  display: none;
+}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/page2.html">Other page</a>
+    </nav>
+    <main>
+      <h1>Home page</h1>
+    </main>
+    <h1 id="status"></h1>
+
+    <div class="loader" id="loader"></div>
+    <button id="button">
+
+      Click Me
+
+    </button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+/*
+        function apicall(url,cb){
+
+          // Doesnt required to be rememberd //non essential
+            $.ajax({
+                url:url,
+                method:"GET",
+                success:function(result){
+                    cb(null,result)
+
+                },error:function(error){
+                    cb(error,null)
+                }
+            })
+
+        }
+
+      let name="Girish";
+
+
+        apicall("http://139.59.8.250:8080/getAdharAndNames",function(err,response){
+        let data=response.data;
+        let adharId;
+
+        for(let i=0;i<data.length;i++){
+          if(data[i].name==name){
+            adharId=data[i].adhar;
+            break;
+
+          }
+        }
+
+   
+ 
+
+
+
+        apicall("http://139.59.8.250:8080/checkVaccinationStatus?adharId="+adharId,function(err1,response2){
+
+          apicall("http://139.59.8.250:8080/getCertificate?adharId="+adharId,function(err1,response2){
+          console.log(response2);
+        })
+   
+        })
+
+        })
+        
+
+
+//Promises   ---->
+
+const button=document.getElementById("button");
+button.addEventListener("click",function(){
+  document.getElementById("loader").style.display="block";
+  fetch("http://139.59.8.250:8080/getAdharAndNames")
+.then(function(result){
+   return result.json();
+}).then(result=>{
+
+  // getting the adhar names;
+  let data=result.data;
+  let adharId;
+
+for(let i=0;i<data.length;i++){
+  if(data[i].name==name){
+    adharId=data[i].adhar;
+    break;
+
+  }
+}
+return adharId;
+
+fetch('http://139.59.8.250:8080/checkVaccinationStatus?adharId='+data).then(data=>{
+    
+    return data.json();
+  }).then(data=>{
+    console.log("final data",data);
+  })
+  
+
+
+}).then(data=>{
+  console.log("Adddddd777",data)
+
+  // Calling the status api 
+  
+  fetch('http://139.59.8.250:8080/checkVaccinationStatus?adharId='+data).then(data=>{
+    
+    return data.json();
+  }).then(data=>{
+    setTimeout(()=>{
+      document.getElementById("loader").style.display="none";
+      document.getElementById("status").innerText=data.message;
+
+    },2000)
+ 
+   
+    console.log("final data",data);
+  })
+
+}).catch(err=>{
+  console.log(err);
+})
+
+
+//async await --->
+
+})
+*/
+//await fetch("http://139.59.8.250:8080/getAdharAndNames");
+async function callApi(){
+const name="Girish";
+try {
+  const data1=await fetch("http://139.59.8.250:8080/getAdharAndNames");
+  const result=await data1.json();
+  let data=result.data;
+  let adharId;
+
+for(let i=0;i<data.length;i++){
+  if(data[i].name==name){
+    adharId=data[i].adhar;
+    break;
+
+  }
+}
+  const data2=await fetch('http://139.59.8.250:8080/checkVaccinationStatus?adharId='+adharId);
+  const result2=await data2.json();
+  console.log("Final await result",result2)
+  
+} catch (error) {
+  
+  console.log(error);
+}
+  
+
+}
+
+callApi();
+
+
+    </script>
+  </body>
+</html>
